@@ -1,0 +1,29 @@
+{
+  "name": "geojson-generator",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app_aws.js",
+  "dependencies": {
+    "aws-sdk": "^2.650.0",
+    "csv-parser": "^2.3.2",
+    "gtfs-to-geojson": "^0.5.0",
+    "gtfs2geojson": "^2.0.0",
+    "pg": "^8.0.0"
+  },
+  "devDependencies": {
+    "convert-csv-to-json": "0.0.15"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/reneelin1712/generate-geojson.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/reneelin1712/generate-geojson/issues"
+  },
+  "homepage": "https://github.com/reneelin1712/generate-geojson#readme"
+}

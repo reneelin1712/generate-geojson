@@ -26,11 +26,6 @@ const client = new Client({
 
 client.connect();
 
-// client.query("SELECT NOW()", (err, res) => {
-//   console.log(err, res);
-//   client.end();
-// });
-
 client.query(
   "SELECT * from forgeojson WHERE issue_year='2019' ORDER BY sum DESC limit 30000",
   //ORDER BY sum DESC limit 50000

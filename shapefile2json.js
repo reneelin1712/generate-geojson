@@ -1,5 +1,3 @@
-// const gtfsToGeoJSON = require("gtfs2geojson");
-// const csv = require("csv-parser");
 const fs = require("fs");
 var parseCSV = require("dsv").csv.parse;
 var path = require("path");

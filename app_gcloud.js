@@ -32,7 +32,9 @@ client.connect();
 // });
 
 client.query(
-  "SELECT * from forgeojson WHERE issue_year='2019' ORDER BY sum DESC limit 50000 ",
+  "SELECT * from forgeojson WHERE issue_year='2019' ORDER BY sum DESC limit 30000",
+  //ORDER BY sum DESC limit 50000
+  // "SELECT * from forgeojson WHERE issue_year='2019' AND issue_month='12'",
   (err, res) => {
     // console.log(res);
     // console.log(err);
@@ -42,8 +44,8 @@ client.query(
         properties: {
           stopID: stop.origin_stop,
           stopName: stop.stop_name,
-          routeNum: stop.route,
-          year: stop.issue_year,
+          //routeNum: stop.route,
+          // year: stop.issue_year,
           month: stop.issue_month,
           qty: stop.sum / 10000
         },
@@ -59,9 +61,9 @@ client.query(
       features: features
     };
 
-    console.log(geoJson2017to2019);
+    // console.log(geoJson2017to2019);
     fs.writeFileSync(
-      "geojson/geoJson2017to2019.json",
+      "geojson/geoJson2019.json",
       JSON.stringify(geoJson2017to2019)
     );
 
